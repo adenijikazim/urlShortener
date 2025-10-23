@@ -8,6 +8,7 @@ const urlSchema =new mongoose.Schema({
     },
     shortUrl: {
         type: String,
+        unique:true
     }
 
 })
