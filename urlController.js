@@ -20,6 +20,12 @@ const shortUrl =async (req,res)=>{
 
 }
 
+const redirectLink = async (req,res)=>{
+    const shortUrl = req.params.shortUrl
+    const link = await ShortUrl.findOne({shortUrl})
+    res.redirect(link.longUrl)
+}
+
 module.exports = {
-    shortUrl
+    shortUrl,redirectLink
 }
