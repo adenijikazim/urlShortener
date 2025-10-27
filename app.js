@@ -1,7 +1,8 @@
 require('dotenv').config()
 const express = require('express')
 const dbConnect = require('./db')
-const urlRouter = require('./urlRoutes')
+const urlRouter = require('./routes/urlRoutes')
+
 const app = express()
 const port = 3000
 
